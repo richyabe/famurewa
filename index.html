@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Lyceum Academy | Mr. Olumide J. Famurewa – Science Educator & Clinical Psychologist</title>
+<meta name="description" content="Lyceum Academy – Premium online Science tutoring by Mr. Olumide J. Famurewa, Science Educator and Clinical Psychologist. Chemistry, Biology, and more for students worldwide."/>
+<meta name="keywords" content="Lyceum Academy, Olumide Famurewa, online tutoring, chemistry, biology, IGCSE, WAEC, clinical psychologist, science educator"/>
+<meta property="og:title" content="Lyceum Academy | Where Every Child Thrives Academically"/>
+<meta property="og:description" content="Expert 1-on-1 Science tutoring by a qualified Educator & Clinical Psychologist. 8+ international curricula. Free trial available."/>
+<meta property="og:type" content="website"/>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+<link rel="stylesheet" href="/lyceum.css" />
+</style>
+</head>
+<body>
+
+<!-- ============================================================ NAVBAR ============================================================ -->
+<nav id="navbar">
+  <div class="wrap">
+    <div class="nav-inner">
+      <div class="nav-logo" onclick="nav('home')">
+        <img src="logo.jpg" alt="Lyceum Academy" class="logo-img"/>
+        <div class="logo-mark"><i class="fas fa-book-open"></i></div>
+        <div class="logo-words">
+          <span class="logo-name">LYCEUM <span style="color:var(--gold)">ACADEMY</span></span>
+          <span class="logo-tag">Illuminating Minds · Shaping Futures</span>
+        </div>
+      </div>
+
+      <ul class="nav-links">
+        <li id="nl-home"   class="active"><a href="#" onclick="nav('home');return false">Home</a></li>
+        <li id="nl-about"><a href="#" onclick="nav('about');return false">About</a></li>
+        <li class="dd" id="nl-content">
+          <a href="#" onclick="nav('content');return false">Content <i class="fas fa-chevron-down" style="font-size:.6rem"></i></a>
+          <div class="dd-menu">
+            <a onclick="nav('content');scrollTo('vids-sec')"><i class="fab fa-youtube"></i>YouTube Videos</a>
+            <a onclick="nav('content');scrollTo('blog-sec')"><i class="fas fa-pen-nib"></i>Blog Articles</a>
+            <a onclick="nav('content');scrollTo('social-sec')"><i class="fas fa-share-nodes"></i>Social Media</a>
+          </div>
+        </li>
+        <li id="nl-trust"><a href="#" onclick="nav('trust');return false">Testimonials</a></li>
+        <li id="nl-contact"><a href="#" onclick="nav('contact');return false">Contact</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <button id="theme-btn" aria-label="Toggle theme"><i class="fas fa-moon"></i></button>
+        <a href="https://wa.me/2347068686953?text=Hello%2C%20I'd%20like%20to%20book%20a%20free%20trial%20at%20Lyceum%20Academy." target="_blank" rel="noopener" class="btn btn-gold btn-sm">
+          <i class="fab fa-whatsapp"></i> Book Free Trial
+        </a>
+        <button id="hbg" aria-label="Open menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Nav -->
+<div id="mnav" role="dialog" aria-label="Navigation menu">
+  <button id="mnav-close" onclick="closeNav()" aria-label="Close menu"><i class="fas fa-times"></i></button>
+  <button onclick="nav('home');closeNav()"><i class="fas fa-home" style="font-size:1.1rem;color:var(--gold)"></i>Home</button>
+  <button onclick="nav('about');closeNav()"><i class="fas fa-user-graduate" style="font-size:1.1rem;color:var(--gold)"></i>About</button>
+  <button onclick="nav('content');closeNav()"><i class="fab fa-youtube" style="font-size:1.1rem;color:var(--gold)"></i>Videos & Content</button>
+  <button onclick="nav('trust');closeNav()"><i class="fas fa-star" style="font-size:1.1rem;color:var(--gold)"></i>Testimonials</button>
+  <button onclick="nav('contact');closeNav()"><i class="fas fa-envelope" style="font-size:1.1rem;color:var(--gold)"></i>Contact</button>
+  <a href="https://wa.me/2347068686953?text=Hello%2C%20I'd%20like%20to%20book%20a%20free%20trial%20at%20Lyceum%20Academy." target="_blank" rel="noopener" class="mnav-wa"><i class="fab fa-whatsapp"></i> Book Free Trial</a>
+</div>
+
+<!-- ================================================================ PAGE 1 — HOME ================================================================ -->
+<div class="page active" id="page-home">
+
+  <section class="hero" id="home">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div data-aos>
+          <div class="live-pill"><div class="live-dot"></div><span class="live-text">Now enrolling students worldwide</span></div>
+          <h1 class="hero-h1">Science made clear,<em>confidence made real.</em></h1>
+          <p class="hero-p">Online Chemistry and Biology tutoring for KS3, KS4, and KS5 students worldwide — taught by a certified, postgraduate-qualified Science Educator and Clinical Psychologist.</p>
+          <div class="hero-btns">
+            <a href="https://wa.me/2347068686953?text=Hello%2C%20I'd%20like%20to%20book%20a%20free%20trial." target="_blank" rel="noopener" class="btn btn-gold btn-lg"><i class="fab fa-whatsapp"></i> Book Your Free Trial</a>
+            <button onclick="nav('about')" class="btn btn-outline btn-lg"><i class="fas fa-user-graduate"></i> Meet the Tutor</button>
+          </div>
+          <div class="hero-trust">
+            <div class="trust-item"><i class="fas fa-check-circle"></i>1-on-1 Live Sessions</div>
+            <div class="trust-item"><i class="fas fa-check-circle"></i>8+ Curricula Covered</div>
+            <div class="trust-item"><i class="fas fa-check-circle"></i>Psychology-Informed Teaching</div>
+            <div class="trust-item"><i class="fas fa-check-circle"></i>Results Guaranteed</div>
+          </div>
+        </div>
+        <div data-aos="right" style="transition-delay:.15s">
+          <div class="sess-card">
+            <p class="sess-lbl">Current Session</p>
+            <h2 class="sess-title">IGCSE Chemistry</h2>
+            <p class="sess-topic">KS4 · Rates of Reaction</p>
+            <div class="sess-meta">
+              <div class="chip"><i class="fas fa-clock"></i>45 min</div>
+              <div class="chip"><i class="fas fa-video"></i>Live online</div>
+              <div class="chip"><i class="fas fa-user"></i>1-on-1</div>
+            </div>
+            <div style="margin-bottom:1.4rem">
+              <div class="prog-lbl"><span>Topic Progress</span><span id="prog-pct">78%</span></div>
+              <div class="prog-bar"><div class="prog-fill" id="prog-fill"></div></div>
+            </div>
+            <div class="tutor-row">
+              <div class="t-av">OF</div>
+              <div><div class="t-name">Mr. Olumide J. Famurewa</div><div class="t-cred">MSc · Science Educator · Clinical Psychologist</div></div>
+              <div class="badge-live">● LIVE</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-hint"><i class="fas fa-chevron-down"></i><span>Scroll</span></div>
+  </section>
+  <section class="sec ages-sec">
+    <div class="wrap">
+      <div class="tc" data-aos><span class="eyebrow">Who We Teach</span><h2 class="h-sec">Ages & Levels <em>We Teach</em></h2><div class="rule"></div><p class="sub-sec">Every session is paced to your child's exact level and learning style — from early curiosity to exam excellence.</p></div>
+      <div class="ages-grid">
+        <div class="age-card" data-aos><div class="age-num">3–5</div><div class="age-lbl">Years Old</div><div class="age-lvl">Early Years</div><div class="age-desc">Foundation numeracy, phonics, creative art, and curiosity-led science exploration</div></div>
+        <div class="age-card" data-aos style="transition-delay:.1s"><div class="age-num">6–10</div><div class="age-lbl">Years Old</div><div class="age-lvl">Primary Upper</div><div class="age-desc">Key Stage 1–2, Grade 1–5 · STEM fundamentals, life & earth sciences</div></div>
+        <div class="age-card" data-aos style="transition-delay:.2s"><div class="age-num">11–13</div><div class="age-lbl">Years Old</div><div class="age-lvl">Lower Secondary</div><div class="age-desc">KS3 · Junior Secondary · Chemistry, Biology & scientific thinking</div></div>
+        <div class="age-card" data-aos style="transition-delay:.3s"><div class="age-num">14–18</div><div class="age-lbl">Years Old</div><div class="age-lvl">Senior / IGCSE</div><div class="age-desc">GCSE · IGCSE · WAEC · SAT · A-Level exam preparation</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Curriculum -->
+  <section class="sec curr-sec">
+    <div class="wrap">
+      <div class="tc white-sec" data-aos><span class="eyebrow">Global Reach</span><h2 class="h-sec">International Curricula <em>We Cover</em></h2><div class="rule" style="margin-left:auto;margin-right:auto"></div><p class="sub-sec" style="margin-left:auto;margin-right:auto">We teach 8+ international curricula so your child is covered wherever you are in the world.</p></div>
+      <div class="curr-pills" data-aos style="transition-delay:.1s">
+        <div class="c-pill"><span class="c-flag">🇳🇬</span><div><div class="c-name">Nigerian</div><div class="c-code">WAEC / NECO / UTME School of Nursing</div></div></div>
+        <div class="c-pill"><span class="c-flag">🇬🇧</span><div><div class="c-name">British</div><div class="c-code">Cambridge / IGCSE</div></div></div>
+        <div class="c-pill"><span class="c-flag">🇺🇸</span><div><div class="c-name">American</div><div class="c-code">Common Core / SAT / AP</div></div></div>
+        <div class="c-pill"><span class="c-flag">🇨🇦</span><div><div class="c-name">Canadian</div><div class="c-code">Provincial Curriculum</div></div></div>
+        <div class="c-pill"><span class="c-flag">🇦🇺</span><div><div class="c-name">Australian</div><div class="c-code">ACARA</div></div></div>
+        <div class="c-pill"><span class="c-flag">🇮🇪</span><div><div class="c-name">Irish</div><div class="c-code">Junior Certificate</div></div></div>
+        <div class="c-pill"><span class="c-flag">🇿🇦</span><div><div class="c-name">South African</div><div class="c-code">CAPS</div></div></div>
+        <div class="c-pill"><span class="c-flag">🇬🇭</span><div><div class="c-name">Ghanaian</div><div class="c-code">BECE / WASSCE</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Subjects -->
+  <section class="sec subj-sec">
+    <div class="wrap">
+      <div class="tc white-sec" data-aos><span class="eyebrow">What We Teach</span><h2 class="h-sec" style="color:#fff">Subjects <em>Offered</em></h2><div class="rule" style="margin-left:auto;margin-right:auto"></div></div>
+      <div class="subj-cloud" data-aos style="transition-delay:.1s">
+        <div class="s-pill ft"><i class="fas fa-flask"></i>Science</div>
+        <div class="s-pill ft"><i class="fas fa-brain"></i>Psychology</div>
+        <div class="s-pill ft"><i class="fas fa-flask"></i>Chemistry</div>
+        <div class="s-pill ft"><i class="fas fa-dna"></i>Biology</div>
+        <div class="s-pill ft"><i class="fas fa-atom"></i>Physics</div>
+        <div class="s-pill"><i class="fas fa-calculator"></i>Mathematics</div>
+        <div class="s-pill"><i class="fas fa-book"></i>English Language</div>
+        <div class="s-pill"><i class="fas fa-landmark"></i>Literature</div>
+        <div class="s-pill"><i class="fas fa-comments"></i>French</div>
+        <div class="s-pill"><i class=""></i>Psychology</div>
+        <div class="s-pill"><i class="fas fa-laptop-code"></i>ICT / Coding</div>
+        <div class="s-pill"><i class="fas fa-pen-nib"></i>Creative Writing</div>
+        <div class="s-pill"><i class="fas fa-spell-check"></i>Phonics & Reading</div>
+        <div class="s-pill"><i class="fas fa-file-alt"></i>Exam Preparation</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why -->
+  <section class="sec why-sec">
+    <div class="wrap">
+      <div class="tc" data-aos><span class="eyebrow">Our Advantage</span><h2 class="h-sec">Why Parents <em>Choose Lyceum</em></h2><div class="rule"></div></div>
+      <div class="why-grid" data-aos style="transition-delay:.1s">
+        <div class="why-card"><div class="why-ico"><i class="fas fa-user-graduate"></i></div><h3>Qualified Tutors</h3><p>Degree-holding tutors with verified teaching experience. Our lead tutor holds an MSc and is certified across multiple international curricula.</p></div>
+        <div class="why-card"><div class="why-ico"><i class="fas fa-brain"></i></div><h3>Psychology-Based Teaching</h3><p>Unique integration of clinical psychology principles — improving memory retention, managing exam anxiety, and building lasting confidence.</p></div>
+        <div class="why-card"><div class="why-ico"><i class="fas fa-globe"></i></div><h3>Global Curriculum</h3><p>We teach 8+ international curricula, so your child is fully covered regardless of school system or country of residence.</p></div>
+        <div class="why-card"><div class="why-ico"><i class="fas fa-chart-line"></i></div><h3>Progress Reports</h3><p>Parents receive regular detailed reports tracking academic growth and areas for improvement — full transparency, always.</p></div>
+        <div class="why-card"><div class="why-ico"><i class="fas fa-calendar-alt"></i></div><h3>Flexible Scheduling</h3><p>Sessions available 7 days a week, morning to evening — built around your family's routine, not the other way around.</p></div>
+        <div class="why-card"><div class="why-ico"><i class="fas fa-shield-alt"></i></div><h3>Safe Online Space</h3><p>Secure, supervised live video sessions from the comfort of your home. Full parental visibility and safeguarding at all times.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="sec proc-sec">
+    <div class="wrap">
+      <div class="tc" data-aos><span class="eyebrow">Simple Steps</span><h2 class="h-sec">How It <em>Works</em></h2><div class="rule"></div><p class="sub-sec">From first contact to measurable results — four clear steps.</p></div>
+      <div class="proc-grid">
+        <div class="p-step" data-aos><div class="p-num">1</div><div class="p-title">Book a Free Trial</div><p class="p-desc">Reserve a 20-minute introductory session at absolutely no cost. No commitment, no pressure.</p></div>
+        <div class="p-step" data-aos style="transition-delay:.1s"><div class="p-num">2</div><div class="p-title">We Assess Your Needs</div><p class="p-desc">We identify exactly where your child is struggling and create a personalised psychology-informed learning plan.</p></div>
+        <div class="p-step" data-aos style="transition-delay:.2s"><div class="p-num">3</div><div class="p-title">Sessions Begin</div><p class="p-desc">Weekly 1-on-1 live sessions via Zoom or Google Meet, paced to your child's level and learning style.</p></div>
+        <div class="p-step" data-aos style="transition-delay:.3s"><div class="p-num">4</div><div class="p-title">Watch Results Grow</div><p class="p-desc">Track progress through improved confidence, better grades, and detailed parent reports every step of the way.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="stats-bar">
+    <div class="wrap">
+      <div class="stats-row">
+        <div class="stat-it" data-aos><div class="stat-n"><span class="ctr" data-t="10">0</span><span>+</span></div><div class="stat-l">Years Teaching</div></div>
+        <div class="stat-it" data-aos style="transition-delay:.1s"><div class="stat-n"><span class="ctr" data-t="500">0</span><span>+</span></div><div class="stat-l">Students Tutored</div></div>
+        <div class="stat-it" data-aos style="transition-delay:.2s"><div class="stat-n"><span class="ctr" data-t="97">0</span><span>%</span></div><div class="stat-l">Parent Satisfaction</div></div>
+        <div class="stat-it" data-aos style="transition-delay:.3s"><div class="stat-n"><span class="ctr" data-t="12">0</span><span>+</span></div><div class="stat-l">Countries Reached</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Free Trial -->
+  <section class="trial-sec">
+    <div class="wrap">
+      <div class="trial-box" data-aos="zoom">
+        <div class="trial-badge"><div class="trial-free">FREE</div><div class="trial-lbl">Trial Session</div></div>
+        <div class="trial-txt"><h3>Book a Free Assessment Today</h3><p>Experience Lyceum Academy risk-free. Our first session includes a complimentary assessment to understand your child's level and learning goals — absolutely no obligation.</p></div>
+        <div class="trial-acts">
+          <a href="https://wa.me/2347068686953?text=Hello%2C%20I'd%20like%20to%20book%20a%20free%20assessment." target="_blank" rel="noopener" class="btn btn-gold btn-lg"><i class="fab fa-whatsapp"></i>Book via WhatsApp</a>
+          <a href="mailto:lyceumacademy4@gmail.com?subject=Free Trial Request" class="btn btn-outline"><i class="fas fa-envelope"></i>Send Email</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gold strip -->
+  <div class="gold-strip">
+    <div class="wrap"><div class="strip-inner">
+      <div class="strip-text">Ready to <em>unlock your child's potential?</em></div>
+      <div class="strip-meta">
+        <span><i class="fas fa-globe"></i>www.lyceumacademy.com.ng</span>
+        <span><i class="fas fa-phone"></i>07068686953</span>
+        <span><i class="fas fa-envelope"></i>lyceumacademy4@gmail.com</span>
+      </div>
+      <button onclick="nav('contact')" class="btn btn-navy">Enrol Today <i class="fas fa-arrow-right"></i></button>
+    </div></div>
+  </div>
+
+  <!-- Home Testimonials -->
+  <section class="sec htesti-sec">
+    <div class="wrap">
+      <div class="tc" data-aos><span class="eyebrow">What Parents Say</span><h2 class="h-sec">Results That <em>Speak</em> for Themselves</h2><div class="rule"></div></div>
+      <div class="testi-wrap" data-aos style="transition-delay:.1s">
+        <div class="testi-track" id="htt">
+          <div class="t-card"><div class="stars">★★★★★</div><p class="t-quote">"My daughter went from failing Chemistry to a B+ in just three months. The sessions are engaging and my daughter actually looks forward to them. Worth every penny."</p><div class="t-author"><div class="t-ava">AM</div><div><div class="t-nm">Mrs. Adaeze Mba</div><div class="t-rl">Parent · Lagos, Nigeria 🇳🇬</div></div></div></div>
+          <div class="t-card"><div class="stars">★★★★★</div><p class="t-quote">"We relocated from the UK to Canada and worried about the curriculum change. Lyceum handled both IGCSE and the Canadian curriculum seamlessly. Outstanding flexibility."</p><div class="t-author"><div class="t-ava">DK</div><div><div class="t-nm">Mr. David Kolade</div><div class="t-rl">Parent · Ontario, Canada 🇨🇦</div></div></div></div>
+          <div class="t-card"><div class="stars">★★★★★</div><p class="t-quote">"The progress reports are incredibly detailed. I know exactly what my son covered each week. No other tutor has given us this level of transparency and accountability."</p><div class="t-author"><div class="t-ava">FO</div><div><div class="t-nm">Mrs. Folake Ogundimu</div><div class="t-rl">Parent · Abuja, Nigeria 🇳🇬</div></div></div></div>
+          <div class="t-card"><div class="stars">★★★★★</div><p class="t-quote">"My son was preparing for WAEC and struggling with Biology. After eight sessions, he scored an A1. The tutor's patience and depth of knowledge are exceptional."</p><div class="t-author"><div class="t-ava">TJ</div><div><div class="t-nm">Mr. Taiwo James</div><div class="t-rl">Parent · Port Harcourt, Nigeria 🇳🇬</div></div></div></div>
+        </div>
+      </div>
+      <div class="t-dots" id="htd"></div>
+      <div class="tc" style="margin-top:2rem"><button onclick="nav('trust')" class="btn btn-navy">Read All Testimonials <i class="fas fa-arrow-right"></i></button></div>
+    </div>
+  </section>
+
+</div><!-- /page-home -->
+
+<!-- ================================================================ PAGE 2 — ABOUT ================================================================ -->
+<div class="page" id="page-about">
+
+  <!-- About Hero -->
+  <section class="about-hero">
+    <div class="wrap">
+      <div class="about-hero-grid">
+        <!-- Portrait -->
+        <div class="portrait-frame" data-aos="left">
+          <div class="portrait-deco portrait-deco-1"></div>
+          <div class="portrait-deco portrait-deco-2"></div>
+          <div class="portrait-wrap">
+            <!-- Replace with: <img src="assets/tutor.jpg" alt="Mr. Olumide J. Famurewa" class="portrait-img"/> -->
+            <div class="portrait-placeholder">
+              <div class="p-icon-wrap"><i class="fas fa-user-tie"></i></div>
+              <p class="p-hint">Add portrait here<br>assets/tutor.jpg<br>Recommended: 600×800px</p>
+            </div>
+            <div class="portrait-badge">
+              <div class="pb-title">Science Educator · Clinical Psychologist</div>
+              <div class="pb-name">Mr. Olumide J. Famurewa</div>
+            </div>
+          </div>
+        </div>
+        <!-- Text -->
+        <div class="about-hero-text" data-aos="right" style="transition-delay:.15s">
+          <span class="eyebrow">Founder & Lead Tutor</span>
+          <h1 class="about-hero-h">Mr. Olumide J.<em>Famurewa</em></h1>
+          <div class="about-hero-titles">
+            <span class="a-pill">Science Educator</span>
+            <span class="a-pill">Clinical Psychologist</span>
+            <span class="a-pill">Founder, Lyceum Academy</span>
+            <span class="a-pill">International Curriculum Specialist</span>
+          </div>
+          <p class="about-hero-bio">A distinguished Science Educator and Clinical Psychologist with over a decade of experience helping students achieve academic excellence. He specializes in Chemistry and Biology education while integrating psychology-informed teaching methods that improve student confidence, motivation, memory retention, and examination performance.</p>
+          <div class="hero-btns">
+            <a href="https://wa.me/2347068686953?text=Hello%20Mr.%20Famurewa%2C%20I'd%20like%20to%20book%20a%20session." target="_blank" rel="noopener" class="btn btn-gold btn-lg"><i class="fab fa-whatsapp"></i>Book a Session</a>
+            <button onclick="document.getElementById('bio-sec').scrollIntoView({behavior:'smooth'})" class="btn btn-outline btn-lg"><i class="fas fa-arrow-down"></i>Read Full Bio</button>
+          </div>
+          <div class="about-hi">
+            <div><div class="ahi-num">10<em>+</em></div><div class="ahi-lbl">Years Teaching</div></div>
+            <div><div class="ahi-num">500<em>+</em></div><div class="ahi-lbl">Students Taught</div></div>
+            <div><div class="ahi-num">8<em>+</em></div><div class="ahi-lbl">Curricula Covered</div></div>
+            <div><div class="ahi-num">12<em>+</em></div><div class="ahi-lbl">Countries Reached</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Biography -->
+  <section class="sec bio-sec" id="bio-sec">
+    <div class="wrap">
+      <div class="bio-grid">
+        <div class="bio-body" data-aos>
+          <span class="eyebrow">Full Biography</span>
+          <h2 class="h-sec">The Story Behind <em>Lyceum Academy</em></h2>
+          <div class="rule"></div>
+          <p>Olumide J. Famurewa is a distinguished Science Educator and Clinical Psychologist with over a decade of experience helping students achieve academic excellence across multiple continents and curricula.</p>
+          <p>Currently serving as a full time lecturer in the Department of Psychology, University of Ilesa, Ilesa and as a Clinical Psychologist at the State Specialist Hospital, Osogbo on a per time basis.</p>
+          <p>As the founder of Lyceum Academy, he has successfully taught students from across the globe — including British (IGCSE/Cambridge), Nigerian (WAEC/NECO), American (SAT/Common Core), Canadian, Australian, Irish, South African, and Ghanaian curricula — making Lyceum one of the most internationally versatile tutoring platforms available.</p>
+          <p>His unique approach fuses scientific expertise with psychological principles — enabling learners to understand difficult concepts, overcome exam anxiety, build lasting confidence, and achieve outstanding academic results. Students don't just pass exams under his guidance; they develop a genuine love for learning.</p>
+          <div class="highlights-list">
+            <div class="hl-item"><i class="fas fa-check-circle"></i>Over 10 years of teaching experience in Science subjects</div>
+            <div class="hl-item"><i class="fas fa-check-circle"></i>Lecturer at the Department of Psychology, University of Ilesa, Ilesa</div>
+            <div class="hl-item"><i class="fas fa-check-circle"></i>Clinical Psychologist at State Specialist Hospital, Osogbo</div>
+            <div class="hl-item"><i class="fas fa-check-circle"></i>Founder and Lead Tutor at Lyceum Academy</div>
+            <div class="hl-item"><i class="fas fa-check-circle"></i>Specialist in Chemistry and Biology education</div>
+            <div class="hl-item"><i class="fas fa-check-circle"></i>Psychology-informed learning strategies & exam coaching</div>
+            <div class="hl-item"><i class="fas fa-check-circle"></i>International curriculum experience across 8+ systems</div>
+            <div class="hl-item"><i class="fas fa-check-circle"></i>Online and one-on-one tutoring specialist</div>
+          </div>
+        </div>
+        <!-- Philosophy card -->
+        <div data-aos="right" style="transition-delay:.15s">
+          <div class="phil-card">
+            <div class="phil-q">"</div>
+            <p class="phil-text">"I believe every student can excel when complex concepts are explained clearly and learning is tailored to their individual needs. My goal is not only to help students pass examinations but to develop confidence, critical thinking, and a lifelong love for learning."</p>
+            <div class="phil-sig">
+              <div class="phil-av">OF</div>
+              <div>
+                <div class="phil-nm">Mr. Olumide J. Famurewa</div>
+                <div class="phil-ttl">Science Educator & Clinical Psychologist</div>
+              </div>
+            </div>
+          </div>
+          <div style="margin-top:1.5rem;display:flex;flex-direction:column;gap:1rem">
+            <div class="why-card" style="padding:1.4rem 1.5rem">
+              <div style="display:flex;align-items:center;gap:.75rem;margin-bottom:.5rem">
+                <div class="why-ico" style="width:40px;height:40px;font-size:1.05rem;margin-bottom:0"><i class="fas fa-brain"></i></div>
+                <strong style="font-size:.92rem">Psychology-Informed Teaching</strong>
+              </div>
+              <p style="font-size:.82rem;color:var(--text-light)">Uses evidence-based psychological techniques to improve memory consolidation, reduce anxiety, and maximise academic performance.</p>
+            </div>
+            <div class="why-card" style="padding:1.4rem 1.5rem">
+              <div style="display:flex;align-items:center;gap:.75rem;margin-bottom:.5rem">
+                <div class="why-ico" style="width:40px;height:40px;font-size:1.05rem;margin-bottom:0"><i class="fas fa-globe"></i></div>
+                <strong style="font-size:.92rem">International Educator</strong>
+              </div>
+              <p style="font-size:.82rem;color:var(--text-light)">Delivered lessons to students in Nigeria, UK, Canada, Australia, Ireland, South Africa, Ghana, and the USA.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Credentials -->
+  <section class="sec creds-sec">
+    <div class="wrap">
+      <div class="tc" data-aos><span class="eyebrow">Academic Background</span><h2 class="h-sec">Qualifications &amp; <em>Credentials</em></h2><div class="rule"></div></div>
+      <div class="creds-grid" style="margin-top:1rem">
+        <div class="cred-col" data-aos>
+          <h3>Education & Licences</h3>
+          <div class="cred-item"><span class="cred-yr">Active</span><div><div class="cred-h4">Lecturer</div><div class="cred-p">Department of Psychology, University of Ilesa, Ilesa, Nigeria</div></div></div>
+          <div class="cred-item"><span class="cred-yr">Active</span><div><div class="cred-h4">Clinical Psychology</div><div class="cred-p">Practising Clinical Psychologist · State Specialist Hospital, Osogbo, Nigeria</div></div></div>
+          <div class="cred-item"><span class="cred-yr">Active</span><div><div class="cred-h4">Science Education Specialist</div><div class="cred-p">Specialist in Chemistry & Biology with postgraduate-level qualifications in Science Education</div></div></div>
+          <div class="cred-item"><span class="cred-yr">Active</span><div><div class="cred-h4">International Curriculum Tutor</div><div class="cred-p">Certified to teach across British, Nigerian, American, Canadian, Australian, Irish, South African & Ghanaian curricula</div></div></div>
+          <div class="cred-item"><span class="cred-yr">Active</span><div><div class="cred-h4">Educational Consultant & Academic Performance Coach</div><div class="cred-p">Providing consultancy and academic coaching for students, schools, and educational institutions</div></div></div>
+        </div>
+        <div class="cred-col" data-aos="right">
+          <h3>Areas of Specialisation</h3>
+          <div style="margin-bottom:1.5rem">
+            <div class="spec-badges">
+              <span class="spec-b">Chemistry</span><span class="spec-b">Biology</span><span class="spec-b">Physics</span>
+              <span class="spec-b">IGCSE Exam Prep</span><span class="spec-b">WAEC / NECO</span>
+              <span class="spec-b">Memory Techniques</span><span class="spec-b">Exam Anxiety</span>
+              <span class="spec-b">Study Skills</span><span class="spec-b">Critical Thinking</span>
+              <span class="spec-b">Clinical Psychology</span><span class="spec-b">Educational Psychology</span>
+              <span class="spec-b">Academic Coaching</span><span class="spec-b">1-on-1 Tutoring</span>
+              <span class="spec-b">Curriculum Design</span>
+            </div>
+          </div>
+          <h3 style="margin-top:2rem">Professional Memberships</h3>
+          <div class="cred-item"><span class="cred-yr">Member</span><div><div class="cred-h4">Nigeria Psychological Association (NPA)</div><div class="cred-p">Member</div></div></div>
+          <div class="cred-item"><span class="cred-yr">Member</span><div><div class="cred-h4">Nigeria Association of Clinical Psychologists (NACP)</div><div class="cred-p">Member</div></div></div>
+          <div class="cred-item"><span class="cred-yr">Member</span><div><div class="cred-h4">Teachers Registration Council of Nigeria (TRCN)</div><div class="cred-p">Member</div></div></div>
+          <div class="cred-item"><span class="cred-yr">Active</span><div><div class="cred-h4">Founder & Lead Tutor</div><div class="cred-p">Lyceum Academy · Online · Global</div></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline -->
+  <section class="sec" style="background:var(--bg-alt);transition:background var(--tr)">
+    <div class="wrap">
+      <div data-aos><span class="eyebrow">Career Journey</span><h2 class="h-sec">The Path to <em>Lyceum Academy</em></h2><div class="rule"></div></div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-top:1rem">
+        <div class="timeline" data-aos>
+          <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">PRESENT</div><div class="tl-role">Lecturer, Department of Psychology</div><div class="tl-org">UNILESA, Ilesa</div><div class="tl-desc">Lecturing in psychology at the University of Ilesa, mentoring undergraduates in educational and clinical psychology.</div></div>
+          <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">PRESENT</div><div class="tl-role">Clinical Psychologist</div><div class="tl-org">State Specialist Hospital, Osogbo</div><div class="tl-desc">Providing psychological assessment, counselling, and clinical intervention for patients across Osun State.</div></div>
+          <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">PRESENT</div><div class="tl-role">Founder & Lead Tutor</div><div class="tl-org">Lyceum Academy · Global (Online)</div><div class="tl-desc">Founded and scaled a premium international online tutoring platform reaching students in 12+ countries across 8+ curricula.</div></div>
+          <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">ONGOING</div><div class="tl-role">International Science Educator</div><div class="tl-org">Multiple Institutions · UK, NG, USA, CA, AU</div><div class="tl-desc">Delivered Chemistry and Biology tutoring to secondary students across multiple countries and educational systems.</div></div>
+        </div>
+        <div class="timeline" data-aos="right" style="transition-delay:.15s">
+          <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">TRAINING</div><div class="tl-role">Clinical Psychology Training</div><div class="tl-org">Postgraduate Level · Nigeria</div><div class="tl-desc">Completed rigorous postgraduate training in clinical psychology from the prestigious Obafemi Awolowo University, Nigeria, specialising in childhood and adolescent psychology.</div></div>
+          <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">EARLY CAREER</div><div class="tl-role">Science Teacher</div><div class="tl-org">Secondary Schools · Nigeria</div><div class="tl-desc">Began teaching career in Nigerian secondary schools, developing the methodology that would later define Lyceum Academy.</div></div>
+          <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">FOUNDATION</div><div class="tl-role">Science Education Graduate</div><div class="tl-org">Post Graduate Diploma in Education, Nigeria</div><div class="tl-desc">Completed postgraduate studies in Science education at National Teachers’ Institute, establishing deep expertise in Chemistry and Biology.</div></div>
+          <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">FOUNDATION</div><div class="tl-role">Certified IGCSE and TRCN Tutor</div><div class="tl-org">British Curriculum · Nigeria</div><div class="tl-desc">Completed training in British curriculum and licensed as a qualified teacher.</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About CTA -->
+  <section class="trial-sec">
+    <div class="wrap">
+      <div class="trial-box" data-aos="zoom">
+        <div class="trial-badge"><div class="trial-free">FREE</div><div class="trial-lbl">Assessment</div></div>
+        <div class="trial-txt"><h3>Work Directly with Mr. Famurewa</h3><p>Book a free introductory session and experience the unique combination of expert Science teaching and psychology-informed learning strategies.</p></div>
+        <div class="trial-acts">
+          <a href="https://wa.me/2347068686953?text=Hello%20Mr.%20Famurewa%2C%20I'd%20like%20to%20book%20a%20free%20assessment." target="_blank" rel="noopener" class="btn btn-gold btn-lg"><i class="fab fa-whatsapp"></i>Book Free Session</a>
+          <button onclick="nav('trust')" class="btn btn-outline">Read Student Reviews</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div><!-- /page-about -->
+
+<!-- ================================================================ PAGE 3 — CONTENT ================================================================ -->
+<div class="page" id="page-content">
+
+  <section class="content-hero">
+    <div class="wrap" style="position:relative;z-index:1">
+      <div class="tc white-sec" data-aos>
+        <span class="eyebrow">Educational Resources</span>
+        <h1 class="h-sec" style="color:#fff">Videos, Blog &amp; <em>Social Media</em></h1>
+        <div class="rule" style="margin-left:auto;margin-right:auto"></div>
+        <p class="sub-sec" style="margin-left:auto;margin-right:auto;color:rgba(255,255,255,.55)">Free educational content from Mr. Famurewa — Science tutorials, psychology-informed study strategies, and academic success insights.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Videos -->
+  <section class="sec vids-sec" id="vids-sec">
+    <div class="wrap">
+      <div data-aos><span class="eyebrow">YouTube Channel</span><h2 class="h-sec">Educational <em>Video Tutorials</em></h2><div class="rule"></div><p class="sub-sec">Free Science tutorials and study-skills videos. Subscribe to the Lyceum Academy YouTube channel for new content weekly.</p></div>
+      <div class="vids-grid" style="margin-top:2.5rem" data-aos style="transition-delay:.1s">
+        <div class="vid-card">
+          <div class="vid-thumb">
+            <!-- Replace VIDEO_ID with real YouTube IDs -->
+            <iframe src="https://youtu.be/wDtoNzvKCxk?si=frM4jLp__Jlk7jwJ&t=65" title="Balancing Chemical Equations Simplified" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <div class="vid-info"><div class="vid-tag">Chemistry</div><div class="vid-title">Balancing Chemical Equations Simplified</div><div class="vid-meta">Lyceum Academy · KS4 / WAEC / IGCSE</div></div>
+        </div>
+        <div class="vid-card">
+          <div class="vid-thumb">
+            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Number Shape System – Memory Techniques" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <div class="vid-info"><div class="vid-tag">Study Skills</div><div class="vid-title">Remember Dates with the Number Shape System</div><div class="vid-meta">Lyceum Academy · Memory Techniques</div></div>
+        </div>
+        <div class="vid-card">
+          <div class="vid-thumb">
+            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Study Skills and Memory Techniques" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <div class="vid-info"><div class="vid-tag">Study Skills</div><div class="vid-title">Study Skills & Memory Techniques for Exam Success</div><div class="vid-meta">Lyceum Academy · Academic Psychology</div></div>
+        </div>
+        <div class="vid-card">
+          <div class="vid-thumb">
+            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Chemistry Tutorial – Periodic Table" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <div class="vid-info"><div class="vid-tag">Chemistry</div><div class="vid-title">The Periodic Table — Everything You Need to Know</div><div class="vid-meta">Lyceum Academy · IGCSE / WAEC / A-Level</div></div>
+        </div>
+        <div class="vid-card">
+          <div class="vid-thumb">
+            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Biology Tutorial – Cell Division" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <div class="vid-info"><div class="vid-tag">Biology</div><div class="vid-title">Cell Division: Mitosis vs Meiosis Explained Clearly</div><div class="vid-meta">Lyceum Academy · KS4 / IGCSE / WAEC</div></div>
+        </div>
+        <div class="vid-card">
+          <div class="vid-thumb">
+            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Exam Anxiety Management" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <div class="vid-info"><div class="vid-tag">Psychology</div><div class="vid-title">Managing Exam Anxiety — A Clinical Psychologist's Guide</div><div class="vid-meta">Lyceum Academy · Mr. O.J. Famurewa</div></div>
+        </div>
+      </div>
+      <div class="tc" style="margin-top:2.5rem">
+        <a href="https://youtube.com/@Lyceumacademy1" target="_blank" rel="noopener" class="btn btn-navy btn-lg"><i class="fab fa-youtube" style="color:#FF0000"></i>Subscribe on YouTube</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog -->
+  <section class="sec blog-sec" id="blog-sec">
+    <div class="wrap">
+      <div class="tc" data-aos><span class="eyebrow">Psychology-Informed Learning</span><h2 class="h-sec">Blog &amp; <em>Articles</em></h2><div class="rule"></div><p class="sub-sec">Evidence-based insights on study psychology, memory, exam preparation, and academic success — by Mr. Famurewa.</p></div>
+      <div class="blog-grid" style="margin-top:2.5rem" data-aos style="transition-delay:.1s">
+        <div class="blog-card">
+          <div class="blog-thumb"><div class="blog-thumb-icon"><i class="fas fa-brain"></i></div></div>
+          <div class="blog-body">
+            <div class="blog-cat">Study Psychology</div>
+            <div class="blog-h">Boosting Student Confidence with Effective Study Techniques</div>
+            <p class="blog-p">Discover how psychology-informed study strategies can transform a struggling student into a confident, self-directed learner — backed by clinical evidence.</p>
+            <a href="#" class="blog-link" onclick="showToast('Full article coming soon!');return false">Read Article <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"><div class="blog-thumb-icon"><i class="fas fa-memory"></i></div></div>
+          <div class="blog-body">
+            <div class="blog-cat">Memory & Learning</div>
+            <div class="blog-h">Memory Improvement Strategies Every Student Must Know</div>
+            <p class="blog-p">From spaced repetition to the Number Shape System — practical, clinically tested techniques for retaining complex Science content long-term.</p>
+            <a href="#" class="blog-link" onclick="showToast('Full article coming soon!');return false">Read Article <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"><div class="blog-thumb-icon"><i class="fas fa-heartbeat"></i></div></div>
+          <div class="blog-body">
+            <div class="blog-cat">Exam Wellbeing</div>
+            <div class="blog-h">Exam Anxiety Management: A Clinical Psychologist's Guide</div>
+            <p class="blog-p">Why do students freeze in exams even when they know the material? A clinical look at exam anxiety and the proven strategies to overcome it.</p>
+            <a href="#" class="blog-link" onclick="showToast('Full article coming soon!');return false">Read Article <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"><div class="blog-thumb-icon"><i class="fas fa-clock"></i></div></div>
+          <div class="blog-body">
+            <div class="blog-cat">Revision Techniques</div>
+            <div class="blog-h">Effective Revision Techniques That Actually Work</div>
+            <p class="blog-p">Active recall, mind mapping, and interleaving explained — and how to build a revision schedule your child will actually follow.</p>
+            <a href="#" class="blog-link" onclick="showToast('Full article coming soon!');return false">Read Article <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"><div class="blog-thumb-icon"><i class="fas fa-trophy"></i></div></div>
+          <div class="blog-body">
+            <div class="blog-cat">Academic Success</div>
+            <div class="blog-h">The Psychology of Academic Success: What Top Students Do Differently</div>
+            <p class="blog-p">Research shows top-performing students share specific psychological habits. Here's what they are and how to develop them deliberately.</p>
+            <a href="#" class="blog-link" onclick="showToast('Full article coming soon!');return false">Read Article <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"><div class="blog-thumb-icon"><i class="fas fa-flask"></i></div></div>
+          <div class="blog-body">
+            <div class="blog-cat">Science Education</div>
+            <div class="blog-h">Why Students Struggle with Chemistry (And How to Fix It)</div>
+            <p class="blog-p">The three most common reasons students find Chemistry hard — and the teaching methodology that reliably turns confusion into clarity.</p>
+            <a href="#" class="blog-link" onclick="showToast('Full article coming soon!');return false">Read Article <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social -->
+  <section class="social-sec" id="social-sec">
+    <div class="wrap">
+      <div class="tc white-sec" data-aos><span class="eyebrow">Stay Connected</span><h2 class="h-sec" style="color:#fff">Follow Lyceum <em>Academy</em></h2><div class="rule" style="margin-left:auto;margin-right:auto"></div><p class="sub-sec" style="margin-left:auto;margin-right:auto;color:rgba(255,255,255,.5)">Follow for free Science content, study tips, exam strategies, and student success stories.</p></div>
+      <div class="social-grid" data-aos style="transition-delay:.1s">
+        <a href="https://youtube.com/@Lyceumacademy1" target="_blank" rel="noopener" class="soc-card soc-yt"><div class="soc-ico"><i class="fab fa-youtube"></i></div><div class="soc-nm">YouTube</div><div class="soc-handle">@Lyceumacademy1</div></a>
+        <a href="https://x.com/famurewaolumide" target="_blank" rel="noopener" class="soc-card soc-tw"><div class="soc-ico"><i class="fab fa-x-twitter"></i></div><div class="soc-nm">X (Twitter)</div><div class="soc-handle">@famurewaolumide</div></a>
+        <a href="https://linkedin.com/in/olumide-famurewa" target="_blank" rel="noopener" class="soc-card soc-li"><div class="soc-ico"><i class="fab fa-linkedin-in"></i></div><div class="soc-nm">LinkedIn</div><div class="soc-handle">Olumide Famurewa</div></a>
+        <a href="https://facebook.com/lyceumacademy" target="_blank" rel="noopener" class="soc-card soc-fb"><div class="soc-ico"><i class="fab fa-facebook-f"></i></div><div class="soc-nm">Facebook</div><div class="soc-handle">Lyceum Academy</div></a>
+        <a href="https://wa.me/2347068686953" target="_blank" rel="noopener" class="soc-card soc-wa"><div class="soc-ico"><i class="fab fa-whatsapp"></i></div><div class="soc-nm">WhatsApp</div><div class="soc-handle">07068686953</div></a>
+        <a href="https://tiktok.com/@lyceumacademy_2" target="_blank" rel="noopener" class="soc-card soc-tt"><div class="soc-ico"><i class="fab fa-tiktok"></i></div><div class="soc-nm">TikTok</div><div class="soc-handle">@lyceumacademy_2</div></a>
+        <a href="https://instagram.com/famurewaolumide2056" target="_blank" rel="noopener" class="soc-card soc-ig"><div class="soc-ico"><i class="fab fa-instagram"></i></div><div class="soc-nm">Instagram</div><div class="soc-handle">famurewaolumide2056</div></a>
+      </div>
+    </div>
+  </section>
+
+</div><!-- /page-content -->
+
+<!-- ================================================================ PAGE 4 — TRUST / TESTIMONIALS ================================================================ -->
+<div class="page" id="page-trust">
+
+  <section class="trust-hero">
+    <div class="wrap" style="position:relative;z-index:1">
+      <div class="tc white-sec" data-aos>
+        <span class="eyebrow">Social Proof</span>
+        <h1 class="h-sec" style="color:#fff">Trusted by Families <em>Worldwide</em></h1>
+        <div class="rule" style="margin-left:auto;margin-right:auto"></div>
+        <p class="sub-sec" style="margin-left:auto;margin-right:auto;color:rgba(255,255,255,.55)">Real results. Real families. Real transformations — across 12 countries and 8+ educational systems.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust badges -->
+  <section class="sec trust-badges">
+    <div class="wrap">
+      <div class="tc" data-aos><span class="eyebrow">Our Promise</span><h2 class="h-sec">What Sets Mr. Famurewa <em>Apart</em></h2><div class="rule"></div></div>
+      <div class="trust-grid" data-aos style="transition-delay:.1s">
+        <div class="tr-card"><div class="tr-ico"><i class="fas fa-user-graduate"></i></div><div class="tr-h">Professional Educator</div><p class="tr-p">Postgraduate-qualified Science educator with 10+ years of verified teaching experience across multiple countries.</p></div>
+        <div class="tr-card"><div class="tr-ico"><i class="fas fa-brain"></i></div><div class="tr-h">Clinical Psychologist</div><p class="tr-p">Practising clinical psychologist who applies evidence-based psychological techniques directly into his teaching methodology.</p></div>
+        <div class="tr-card"><div class="tr-ico"><i class="fas fa-globe"></i></div><div class="tr-h">International Experience</div><p class="tr-p">Taught students across 12+ countries, covering 8+ major international educational curricula from a single platform.</p></div>
+        <div class="tr-card"><div class="tr-ico"><i class="fas fa-file-alt"></i></div><div class="tr-h">Personalised Learning Plans</div><p class="tr-p">Every student receives a bespoke learning plan built around their specific needs, learning style, and academic goals.</p></div>
+        <div class="tr-card"><div class="tr-ico"><i class="fas fa-user"></i></div><div class="tr-h">One-on-One Tutoring</div><p class="tr-p">Fully personalised 1-on-1 sessions. Your child gets the tutor's undivided attention every session.</p></div>
+        <div class="tr-card"><div class="tr-ico"><i class="fas fa-trophy"></i></div><div class="tr-h">Proven Student Success</div><p class="tr-p">Documented grade improvements across IGCSE, WAEC, A-Level, and SAT — from failing grades to distinctions.</p></div>
+        <div class="tr-card"><div class="tr-ico"><i class="fas fa-atlas"></i></div><div class="tr-h">Global Curriculum Coverage</div><p class="tr-p">Nigerian, British, American, Canadian, Australian, Irish, South African, and Ghanaian curricula — all covered.</p></div>
+        <div class="tr-card"><div class="tr-ico"><i class="fas fa-dna"></i></div><div class="tr-h">Psychology-Based Methods</div><p class="tr-p">Unique dual expertise in Science education and clinical psychology produce measurable student outcomes.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Full testimonials -->
+  <section class="sec full-testi-sec">
+    <div class="wrap">
+      <div class="tc" data-aos><span class="eyebrow">Student & Parent Reviews</span><h2 class="h-sec">Results That <em>Speak for Themselves</em></h2><div class="rule"></div></div>
+      <div class="full-testi-grid" data-aos style="transition-delay:.1s">
+        <div class="ft-card"><div class="ft-flag">🇳🇬</div><div class="stars">★★★★★</div><p class="t-quote">"My daughter went from failing Chemistry to a B+ in just three months. The sessions are engaging, well-explained, and my daughter actually looks forward to them. The way Mr. Famurewa explains concepts makes everything click. Worth every penny."</p><div class="t-author"><div class="t-ava">AM</div><div><div class="t-nm">Mrs. Adaeze Mba</div><div class="t-rl">Parent · Lagos, Nigeria</div></div></div></div>
+        <div class="ft-card"><div class="ft-flag">🇨🇦</div><div class="stars">★★★★★</div><p class="t-quote">"We relocated from the UK to Canada and worried about the curriculum change. Mr. Famurewa handled both IGCSE and the Canadian curriculum seamlessly. His knowledge is extraordinary and his patience with my daughter is remarkable."</p><div class="t-author"><div class="t-ava">DK</div><div><div class="t-nm">Mr. David Kolade</div><div class="t-rl">Parent · Ontario, Canada</div></div></div></div>
+        <div class="ft-card"><div class="ft-flag">🇳🇬</div><div class="stars">★★★★★</div><p class="t-quote">"The progress reports are incredibly detailed. I know exactly what my son covered each week and where he needs more work. No other tutor has given us that level of transparency. My son's confidence has been completely transformed."</p><div class="t-author"><div class="t-ava">FO</div><div><div class="t-nm">Mrs. Folake Ogundimu</div><div class="t-rl">Parent · Abuja, Nigeria</div></div></div></div>
+        <div class="ft-card"><div class="ft-flag">🇳🇬</div><div class="stars">★★★★★</div><p class="t-quote">"My son was preparing for WAEC and struggling with Biology. After eight sessions with Mr. Famurewa, he scored an A1. I had nearly given up hope — his patience and depth of knowledge are truly exceptional."</p><div class="t-author"><div class="t-ava">TJ</div><div><div class="t-nm">Mr. Taiwo James</div><div class="t-rl">Parent · Port Harcourt, Nigeria</div></div></div></div>
+        <div class="ft-card"><div class="ft-flag">🇬🇧</div><div class="stars">★★★★★</div><p class="t-quote">"We found Mr. Famurewa through a referral and couldn't be happier. My daughter's IGCSE Chemistry grade went from a D to an A in one term. His psychology-based approach was a genuine game-changer for our family."</p><div class="t-author"><div class="t-ava">SB</div><div><div class="t-nm">Mrs. Sarah Bello</div><div class="t-rl">Parent · London, UK</div></div></div></div>
+        <div class="ft-card"><div class="ft-flag">🇦🇺</div><div class="stars">★★★★★</div><p class="t-quote">"As an Australian student studying through the ACARA curriculum, I was worried about finding a tutor with the right knowledge. Mr. Famurewa not only knew the curriculum inside out but made Biology genuinely exciting for me."</p><div class="t-author"><div class="t-ava">EM</div><div><div class="t-nm">Ethan Mitchell</div><div class="t-rl">Student · Sydney, Australia</div></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comments section -->
+  <section class="sec comments-sec">
+    <div class="wrap">
+      <div data-aos><span class="eyebrow">Community</span><h2 class="h-sec">Share Your <em>Experience</em></h2><div class="rule"></div><p class="sub-sec" style="margin-bottom:2.5rem">Have you worked with Mr. Famurewa or studied at Lyceum Academy? Leave a review below — your words help other families make the right choice.</p></div>
+
+      <div class="comment-form-wrap" data-aos>
+        <h3>Leave a Review</h3>
+        <div style="margin-bottom:1rem">
+          <label style="font-size:.78rem;color:var(--text-light);font-weight:500;display:block;margin-bottom:.4rem">Your Rating *</label>
+          <div class="rating-row" id="star-rating">
+            <button class="star-btn" data-val="1" onclick="setRating(1)" aria-label="1 star">★</button>
+            <button class="star-btn" data-val="2" onclick="setRating(2)" aria-label="2 stars">★</button>
+            <button class="star-btn" data-val="3" onclick="setRating(3)" aria-label="3 stars">★</button>
+            <button class="star-btn" data-val="4" onclick="setRating(4)" aria-label="4 stars">★</button>
+            <button class="star-btn" data-val="5" onclick="setRating(5)" aria-label="5 stars">★</button>
+          </div>
+        </div>
+        <div class="cf-row">
+          <div class="cf-group"><label>Your Name *</label><input type="text" id="cmt-name" placeholder="e.g. Mrs. Adaeze Mba" required/></div>
+          <div class="cf-group"><label>Role</label><select id="cmt-role"><option value="">Select your role</option><option>Parent</option><option>Student</option><option>Graduate</option><option>Colleague</option><option>Other</option></select></div>
+        </div>
+        <div class="cf-group" style="margin-bottom:1rem"><label>Country</label><input type="text" id="cmt-country" placeholder="e.g. Nigeria 🇳🇬"/></div>
+        <div class="cf-group" style="margin-bottom:1.2rem"><label>Your Review *</label><textarea id="cmt-body" placeholder="Share your honest experience with Mr. Famurewa or Lyceum Academy…"></textarea></div>
+        <button class="btn btn-gold btn-lg" onclick="submitComment()"><i class="fas fa-paper-plane"></i>Submit Review</button>
+      </div>
+
+      <!-- Comments list -->
+      <div id="comments-list" class="comments-list"></div>
+    </div>
+  </section>
+
+</div><!-- /page-trust -->
+
+<!-- ================================================================ PAGE 5 — CONTACT ================================================================ -->
+<div class="page" id="page-contact">
+
+  <section class="contact-hero">
+    <div class="wrap" style="position:relative;z-index:1">
+      <div class="tc white-sec" data-aos>
+        <span class="eyebrow">Reach Us</span>
+        <h1 class="h-sec" style="color:#fff">Get in <em>Touch</em></h1>
+        <div class="rule" style="margin-left:auto;margin-right:auto"></div>
+        <p class="sub-sec" style="margin-left:auto;margin-right:auto;color:rgba(255,255,255,.55)">Ready to enrol? Have questions? Book a free trial or send us a message — we respond within 24 hours.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec contact-sec">
+    <div class="wrap">
+      <div class="contact-grid">
+        <div class="c-info" data-aos>
+          <div class="c-item"><div class="c-ico"><i class="fas fa-globe"></i></div><div><div class="c-lbl">Website</div><div class="c-val">www.lyceumacademy.com.ng</div></div></div>
+          <div class="c-item"><div class="c-ico"><i class="fas fa-phone"></i></div><div><div class="c-lbl">Phone / WhatsApp</div><div class="c-val">07068686953</div></div></div>
+          <div class="c-item"><div class="c-ico"><i class="fas fa-envelope"></i></div><div><div class="c-lbl">Email</div><div class="c-val">lyceumacademy4@gmail.com</div></div></div>
+          <div class="c-item"><div class="c-ico"><i class="fas fa-video"></i></div><div><div class="c-lbl">Sessions Via</div><div class="c-val">Zoom · Google Meet · Microsoft Teams</div></div></div>
+          <div class="c-item"><div class="c-ico"><i class="fas fa-clock"></i></div><div><div class="c-lbl">Availability</div><div class="c-val">7 days a week · Morning to Evening</div></div></div>
+          <div>
+            <div class="c-lbl" style="margin-bottom:.75rem">Follow Us</div>
+            <div class="soc-row">
+              <a href="https://youtube.com/@Lyceumacademy1" target="_blank" class="sc-btn" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+              <a href="https://x.com/famurewaolumide" target="_blank" class="sc-btn" aria-label="X/Twitter"><i class="fab fa-x-twitter"></i></a>
+              <a href="https://linkedin.com/in/olumide-famurewa" target="_blank" class="sc-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="https://facebook.com/lyceumacademy" target="_blank" class="sc-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://tiktok.com/@lyceumacademy_2" target="_blank" class="sc-btn" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+              <a href="https://instagram.com/famurewaolumide2056" target="_blank" class="sc-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="https://wa.me/2347068686953" target="_blank" class="sc-btn" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form-wrap" data-aos="right" onsubmit="handleContactForm(event)">
+          <div class="fg-row">
+            <div class="fg"><label>Full Name *</label><input type="text" required placeholder="Your full name"/></div>
+            <div class="fg"><label>Email Address *</label><input type="email" required placeholder="your@email.com"/></div>
+          </div>
+          <div class="fg"><label>WhatsApp / Phone</label><input type="tel" placeholder="+234 xxx xxx xxxx"/></div>
+          <div class="fg-row">
+            <div class="fg"><label>Subject of Interest</label><select><option value="">Select subject</option><option>Chemistry</option><option>Biology</option><option>Physics</option><option>Mathematics</option><option>English Language</option><option>Multiple Subjects</option><option>Other</option></select></div>
+            <div class="fg"><label>Student's Age / Level</label><select><option value="">Select level</option><option>Early Years (3–5)</option><option>Primary (6–10)</option><option>Lower Secondary (11–13)</option><option>Senior / IGCSE (14–18)</option></select></div>
+          </div>
+          <div class="fg"><label>Curriculum / School System</label><select><option value="">Select curriculum</option><option>Nigerian (WAEC/NECO)</option><option>British (IGCSE/Cambridge)</option><option>American (Common Core/SAT)</option><option>Canadian</option><option>Australian</option><option>Irish</option><option>South African (CAPS)</option><option>Ghanaian (BECE/WASSCE)</option><option>Other</option></select></div>
+          <div class="fg"><label>Message</label><textarea placeholder="Tell us about your child's level, goals, and what you'd like help with…"></textarea></div>
+          <div style="display:flex;gap:1rem;flex-wrap:wrap">
+            <button type="submit" class="btn btn-gold btn-lg"><i class="fas fa-paper-plane"></i>Send Message</button>
+            <a href="https://wa.me/2347068686953?text=Hello%2C%20I%20have%20an%20enquiry%20about%20Lyceum%20Academy." target="_blank" rel="noopener" class="btn btn-wa btn-lg"><i class="fab fa-whatsapp"></i>Chat on WhatsApp</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map placeholder -->
+  <div class="map-sec">
+    <div class="wrap">
+      <div class="map-box">
+        <i class="fas fa-map-marker-alt"></i>
+        <p>Lyceum Academy operates fully online<br>Serving students worldwide via Zoom & Google Meet<br><span style="color:var(--gold);font-size:.8rem">lyceumacademy.com.ng</span></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <section class="sec faq-sec">
+    <div class="wrap">
+      <div class="tc" data-aos><span class="eyebrow">Common Questions</span><h2 class="h-sec">Frequently Asked <em>Questions</em></h2><div class="rule"></div></div>
+      <div class="faq-list" data-aos style="transition-delay:.1s">
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">How do I book a free trial session? <i class="fas fa-plus"></i></button><div class="faq-a"><p>Simply click the "Book Free Trial" button or message us directly on WhatsApp at 07068686953. We'll schedule a convenient 20-minute introductory session at no cost, with no obligation to continue.</p></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What subjects does Lyceum Academy cover? <i class="fas fa-plus"></i></button><div class="faq-a"><p>Our primary specialisations are Chemistry, Biology, and Physics. We also cover Mathematics, English Language, Geography, History, Literature, French, Economics, ICT/Coding, Creative Writing, Phonics, and Exam Preparation across multiple curricula.</p></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Which curricula do you support? <i class="fas fa-plus"></i></button><div class="faq-a"><p>We teach 8+ international curricula: Nigerian (WAEC/NECO), British (Cambridge/IGCSE), American (Common Core/SAT), Canadian, Australian (ACARA), Irish (Junior Certificate), South African (CAPS), and Ghanaian (BECE/WASSCE).</p></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">How are sessions delivered? <i class="fas fa-plus"></i></button><div class="faq-a"><p>All sessions are delivered live via Zoom, Google Meet, or Microsoft Teams — whichever platform works best for your family. Sessions are fully interactive, 1-on-1, and recorded upon request.</p></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What is psychology-informed teaching? <i class="fas fa-plus"></i></button><div class="faq-a"><p>Mr. Famurewa is both a Science Educator and a practising Clinical Psychologist. He incorporates evidence-based psychological techniques — such as spaced repetition, memory consolidation strategies, anxiety management, and motivational psychology — directly into his lessons to improve learning outcomes beyond what traditional tutoring achieves.</p></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">How often are sessions scheduled? <i class="fas fa-plus"></i></button><div class="faq-a"><p>Sessions are available 7 days a week, morning to evening. Frequency is determined by your child's needs and goals — most students have 1–3 sessions per week. We build the schedule around your family's routine.</p></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What age groups do you teach? <i class="fas fa-plus"></i></button><div class="faq-a"><p>We teach students from Early Years (age 3–5) through to Senior Secondary / Sixth Form (age 14–18), including IGCSE, WAEC, A-Level, and SAT exam candidates.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="trial-sec">
+    <div class="wrap">
+      <div class="trial-box" data-aos="zoom">
+        <div class="trial-badge"><div class="trial-free">FREE</div><div class="trial-lbl">Assessment</div></div>
+        <div class="trial-txt"><h3>Start Your Child's Journey Today</h3><p>Book a free 20-minute introductory session. No commitment. No charge. Just clarity on how Lyceum Academy can help your child achieve their full potential.</p></div>
+        <div class="trial-acts">
+          <a href="https://wa.me/2347068686953?text=Hello%2C%20I'd%20like%20to%20book%20a%20free%20trial%20session%20at%20Lyceum%20Academy." target="_blank" rel="noopener" class="btn btn-gold btn-lg"><i class="fab fa-whatsapp"></i>Book Free Trial Now</a>
+          <a href="mailto:lyceumacademy4@gmail.com?subject=Free Trial Request" class="btn btn-outline"><i class="fas fa-envelope"></i>Send an Email</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div><!-- /page-contact -->
+
+<!-- FOOTER (shared) -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div style="display:flex;align-items:center;gap:.7rem;margin-bottom:.2rem">
+          <div class="logo-mark" style="width:36px;height:36px;font-size:1rem"><i class="fas fa-book-open"></i></div>
+          <div><div style="font-family:var(--font-d);font-size:1.05rem;font-weight:700;color:#fff;letter-spacing:.04em">LYCEUM <span style="color:var(--gold)">ACADEMY</span></div><div style="font-size:.58rem;color:rgba(255,255,255,.3);letter-spacing:.1em">ILLUMINATING MINDS · SHAPING FUTURES</div></div>
+        </div>
+        <p>Premium personalised online Science tutoring by Mr. Olumide J. Famurewa — Science Educator & Clinical Psychologist. Serving students in 12+ countries worldwide.</p>
+      </div>
+      <div class="f-col">
+        <h5>Pages</h5>
+        <ul>
+          <li><button onclick="nav('home')">Home</button></li>
+          <li><button onclick="nav('about')">About Mr. Famurewa</button></li>
+          <li><button onclick="nav('content')">Videos & Content</button></li>
+          <li><button onclick="nav('trust')">Testimonials</button></li>
+          <li><button onclick="nav('contact')">Contact</button></li>
+        </ul>
+      </div>
+      <div class="f-col">
+        <h5>Subjects</h5>
+        <ul>
+          <li><a href="#" onclick="nav('home');return false">Chemistry</a></li>
+          <li><a href="#" onclick="nav('home');return false">Biology</a></li>
+          <li><a href="#" onclick="nav('home');return false">Physics</a></li>
+          <li><a href="#" onclick="nav('home');return false">Mathematics</a></li>
+          <li><a href="#" onclick="nav('home');return false">All Subjects</a></li>
+        </ul>
+      </div>
+      <div class="f-col">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="https://wa.me/2347068686953" target="_blank" rel="noopener">WhatsApp: 07068686953</a></li>
+          <li><a href="mailto:lyceumacademy4@gmail.com">lyceumacademy4@gmail.com</a></li>
+          <!-- <li><a href="https://www.lyceumacademy.com.ng" target="_blank">www.lyceumacademy.com.ng</a></li> -->
+          <li><button onclick="nav('contact')">Book Free Trial</button></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="f-copy">© 2025 Lyceum Academy · Mr. Olumide J. Famurewa. All rights reserved.</p>
+      <div class="f-socials">
+        <a href="https://youtube.com/@Lyceumacademy1" target="_blank" class="sc-btn" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://x.com/famurewaolumide" target="_blank" class="sc-btn" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+        <a href="https://linkedin.com/in/olumide-famurewa" target="_blank" class="sc-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://facebook.com/lyceumacademy" target="_blank" class="sc-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://tiktok.com/@lyceumacademy_2" target="_blank" class="sc-btn" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+              <a href="https://instagram.com/famurewaolumide2056" target="_blank" class="sc-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="https://wa.me/2347068686953" target="_blank" class="sc-btn" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/2347068686953?text=Hello%2C%20I'd%20like%20to%20book%20a%20free%20trial%20at%20Lyceum%20Academy." target="_blank" rel="noopener" id="fab-wa" aria-label="Book free trial on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+<button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+<div id="toast"></div>
+
+<!-- ================================================================ JAVASCRIPT ================================================================ -->
+<script src="/lyceum.js" defer></script>
+</body>
+</html>
