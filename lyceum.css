@@ -284,7 +284,8 @@ input,textarea,select,button{font-family:var(--font-b)}
   transition:transform var(--tr),box-shadow var(--tr);
 }
 .nav-logo:hover .logo-mark{transform:scale(1.08) rotate(-3deg);box-shadow:var(--sh-gold)}
-.logo-img{height:40px;width:auto;max-width:150px;object-fit:contain;filter:brightness(0) invert(1)}
+.logo-img{height:44px;width:auto;max-width:160px;object-fit:contain;boder-radius:8px;background:#fff;padding:3px;transition:transform .3s ease}
+.nav-logo:hover logo-img{transform:scale(1.06)}
 .logo-words{display:flex;flex-direction:column;line-height:1.1}
 .logo-name{font-family:var(--font-d);font-size:1.05rem;font-weight:700;color:#fff;letter-spacing:.04em}
 .logo-tag{font-size:.55rem;color:rgba(255,255,255,.45);letter-spacing:.1em;text-transform:uppercase}
