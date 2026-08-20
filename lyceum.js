@@ -242,3 +242,18 @@ function showToast(msg) {
   t.classList.add('show');
   setTimeout(() => t.classList.remove('show'), 3500);
 }
+(function hideLoader() {
+  const loader = document.getElementById('loader');
+  if (!loader) return;
+
+  const removeLoader = () => {
+    loader.classList.add('hidden');
+    setTimeout(() => loader.remove(), 650);
+  };
+
+  if (document.readyState === 'complete' || document.readyState === 'interactive') {
+    setTimeout(removeLoader, 1400);
+  } else {
+    window.addEventListener('DOMContentLoaded', () => setTimeout(removeLoader, 1400));
+  }
+})();
