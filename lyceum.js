@@ -1,3 +1,57 @@
+document.addEventListener('DOMContentLoaded', async () => {
+  try {
+    await loadAppearance();
+    await Promise.all([ loadProfile(), loadContact(), loadNavigation() ]);
+    await applySeo();
+
+    await Promise.all([
+      loadAboutSection(), loadContentSection(), loadContactSection(),
+      loadServicesSection(), loadPublicationsSection(), loadMetricsSection(),
+      loadGallerySection(), loadMediaSection(), loadTestimonialsSection(), loadAppointmentSection(),
+    ]);
+
+    applySectionVisibility();
+    initNavbar(); initThemeToggle(); initHamburger(); initAOSGlobal();
+    initContactForm(); initLightbox(); initApptModal(); initApplyModal();
+
+    setTimeout(() => {
+      const loader = document.getElementById('page-loader');
+      if (loader) loader.classList.add('hide');
+      setTimeout(() => loader?.remove(), 600);
+    }, 400);
+  } catch (err) {
+    console.error('Public site load error:', err);
+    document.getElementById('page-loader')?.classList.add('hide');
+  }
+});
+
+// ─── Appearance ────────────────────────────────────────────
+async function loadAppearance() {
+  try {
+    const d = await sbGet(TABLES.APPEARANCE);
+    if (!d) return;
+    siteAppearance = d;
+    const root = document.documentElement;
+    if (d.color_navy) root.style.setProperty('--navy', d.color_navy);
+    if (d.color_gold) root.style.setProperty('--gold', d.color_gold);
+    if (d.color_cream) root.style.setProperty('--cream', d.color_cream);
+    if (d.color_gold_light) root.style.setProperty('--gold-light', d.color_gold_light);
+    if (d.font_display) root.style.setProperty('--font-display', d.font_display);
+    if (d.font_body) root.style.setProperty('--font-body', d.font_body);
+    const saved = localStorage.getItem('pub-theme');
+    if (saved) document.documentElement.setAttribute('data-theme', saved);
+    else if (d.dark_mode_default) document.documentElement.setAttribute('data-theme', 'dark');
+    if (d.animations === false) document.documentElement.style.setProperty('--tr', '0s');
+  } catch (e) { console.warn('Appearance load failed:', e); }
+}
+
+function applySectionVisibility() {
+  const vis = siteAppearance.section_visibility || {};
+  Object.entries(vis).forEach(([key, visible]) => {
+    const el = document.getElementById(`section-${key}`);
+    if (el) el.style.display = visible ? '' : 'none';
+  });
+}
 /* ---- State ---- */
 let currentRating = 0;
 const comments = [
