@@ -215,33 +215,68 @@ function submitComment() {
 }
 renderComments();
 
-/* ---- Contact form ---- */
+/* ---- Contact form → mailto ---- */
 function handleContactForm(e) {
   e.preventDefault();
-  const btn = e.target.querySelector('button[type="submit"]');
-  btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending…';
+  const form = e.target;
+  const val = (id) => (document.getElementById(id)?.value || '').trim();
+  const name = val('cf-name');
+  const email = val('cf-email');
+  const phone = val('cf-phone');
+  const subject = val('cf-subject');
+  const level = val('cf-level');
+  const curriculum = val('cf-curriculum');
+  const message = val('cf-message');
+
+  const lines = [
+    `Full Name: ${name}`,
+    `Email: ${email}`,
+    `WhatsApp / Phone: ${phone || '—'}`,
+    `Subject of Interest: ${subject || '—'}`,
+    `Student's Age / Level: ${level || '—'}`,
+    `Curriculum / School System: ${curriculum || '—'}`,
+    '',
+    'Message:',
+    message || '—',
+    '',
+    '— Sent from lyceumacademy.com contact form'
+  ];
+
+  const mailSubject = `New Enquiry from ${name || 'Website Visitor'}${subject ? ' — ' + subject : ''}`;
+  const href = 'mailto:lyceumacademy4@gmail.com'
+    + '?subject=' + encodeURIComponent(mailSubject)
+    + '&body=' + encodeURIComponent(lines.join('\n'));
+
+  const btn = form.querySelector('button[type="submit"]');
+  btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Opening your email…';
   btn.disabled = true;
+
+  window.location.href = href;
+
   setTimeout(() => {
-    btn.innerHTML = '<i class="fas fa-check"></i> Sent! We\'ll be in touch within 24 hours.';
+    btn.innerHTML = '<i class="fas fa-check"></i> Email ready — just hit send!';
     btn.style.background = 'linear-gradient(135deg,#25D366,#128C7E)';
     btn.style.color = '#fff';
     btn.disabled = false;
-    e.target.reset();
+    showToast('Your email app is opening with the message pre-filled.');
     setTimeout(() => {
       btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
       btn.style.background = '';
       btn.style.color = '';
     }, 5000);
-  }, 1400);
+  }, 900);
 }
 
+
 /* ---- Toast ---- */
-function showToast(msg) {
+function showToast(msg) {me 
   const t = document.getElementById('toast');
   t.textContent = msg;
   t.classList.add('show');
   setTimeout(() => t.classList.remove('show'), 3500);
 }
+
+/* ---- Loader ---- */
 (function hideLoader() {
   const loader = document.getElementById('loader');
   if (!loader) return;
