@@ -712,15 +712,20 @@
             <div class="fg"><label for="cf-email">Email Address *</label><input id="cf-email" name="email" type="email" required placeholder="your@email.com"/></div>
           </div>
           <div class="fg"><label for="cf-phone">WhatsApp / Phone</label><input id="cf-phone" name="phone" type="tel" placeholder="+234 xxx xxx xxxx"/></div>
-          <div class="fg-row">
-          <select id="cf-subject" name="subject[]" multiple size="5">
-             <option value="Chemistry">Chemistry</option>
-             <option value="Biology">Biology</option>
-             <option value="Physics">Physics</option>
-             <option value="Mathematics">Mathematics</option>
-             <option value="English Language">English Language</option>
-             <option value="Other">Other</option>
-         </select>
+          <div class="fg">
+  <label for="cf-subject">Subject(s) of Interest <small>(Hold Ctrl/Cmd to select multiple)</small></label>
+  <select id="cf-subject" name="subject" multiple size="4">
+    <option>Chemistry</option>
+    <option>Biology</option>
+    <option>Physics</option>
+    <option>Mathematics</option>
+    <option>English Language</option>
+    <option>Psychology</option>
+    <option>Multiple Subjects</option>
+    <option>Other</option>
+  </select>
+          </div>
+          
             <div class="fg"><label for="cf-level">Student's Age / Level</label><select id="cf-level" name="level"><option value="">Select level</option><option>Early Years (3–5)</option><option>Upper and Lower Primary (6–10)</option><option>Lower Secondary (11–13)</option><option>Upper Secondary / Sixth Form (14–18)</option></select></div>
           </div>
           <div class="fg"><label for="cf-curriculum">Curriculum / School System</label><select id="cf-curriculum" name="curriculum"><option value="">Select curriculum</option><option>Nigerian (WAEC/NECO)</option><option>British (IGCSE/Cambridge)</option><option>American (Common Core/SAT)</option><option>Canadian</option><option>Australian</option><option>Irish</option><option>South African (CAPS)</option><option>Ghanaian (BECE/WASSCE)</option><option>Other</option></select></div>
