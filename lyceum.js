@@ -223,7 +223,9 @@ function handleContactForm(e) {
   const name = val('cf-name');
   const email = val('cf-email');
   const phone = val('cf-phone');
-  const subject = val('cf-subject');
+  const subject = Array.from(
+  document.getElementById('cf-subject').selectedOptions
+).map(option => option.value).join(', ');
   const level = val('cf-level');
   const curriculum = val('cf-curriculum');
   const message = val('cf-message');
