@@ -217,19 +217,18 @@ renderComments();
 
 /* ---- Contact form → mailto ---- */
 
+/* ---- Contact form → mailto ---- */
 function handleContactForm(e) {
   e.preventDefault();
   const form = e.target;
-
   const val = (id) => (document.getElementById(id)?.value || '').trim();
-
   const name = val('cf-name');
   const email = val('cf-email');
   const phone = val('cf-phone');
-
-  const subjectEl = document.getElementById('cf-subject');
-  const subject = Array.from(subjectEl.selectedOptions).map(o => o.value).join(', ') || '—';
-
+  const subjEl = document.getElementById('cf-subject');
+  const subject = subjEl
+    ? Array.from(subjEl.selectedOptions).map(o => o.value || o.text).filter(Boolean).join(', ')
+    : '';
   const level = val('cf-level');
   const curriculum = val('cf-curriculum');
   const message = val('cf-message');
@@ -238,7 +237,7 @@ function handleContactForm(e) {
     `Full Name: ${name}`,
     `Email: ${email}`,
     `WhatsApp / Phone: ${phone || '—'}`,
-    `Subject(s) of Interest: ${subject}`,
+    `Subject(s) of Interest: ${subject || '—'}`,
     `Student's Age / Level: ${level || '—'}`,
     `Curriculum / School System: ${curriculum || '—'}`,
     '',
@@ -248,23 +247,48 @@ function handleContactForm(e) {
     '— Sent from lyceumacademy.com contact form'
   ];
 
-  const mailSubject = `New Enquiry from ${name || 'Website Visitor'}${subject !== '—' ? ' — ' + subject : ''}`;
+  const mailSubject = `New Enquiry from ${name || 'Website Visitor'}${subject ? ' — ' + subject : ''}`;
+  const body = lines.join('\n');
   const href = 'mailto:lyceumacademy4@gmail.com'
     + '?subject=' + encodeURIComponent(mailSubject)
-    + '&body=' + encodeURIComponent(lines.join('\n'));
+    + '&body=' + encodeURIComponent(body);
+  const gmail = 'https://mail.google.com/mail/?view=cm&fs=1&to=lyceumacademy4@gmail.com'
+    + '&su=' + encodeURIComponent(mailSubject)
+    + '&body=' + encodeURIComponent(body);
 
   const btn = form.querySelector('button[type="submit"]');
   btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Opening your email…';
   btn.disabled = true;
 
-  window.location.href = href;
+  // Anchor click works where location assignment is blocked (iframes, some browsers)
+  let opened = false;
+  try {
+    const a = document.createElement('a');
+    a.href = href;
+    a.style.display = 'none';
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    opened = true;
+  } catch (_) { opened = false; }
+
+  if (!opened) {
+    try { window.open(href, '_self'); opened = true; } catch (_) {}
+  }
+
+  // Fallback: Gmail web compose if no mail app handled the link
+  setTimeout(() => {
+    if (document.hidden) return; // mail app took over
+    const w = window.open(gmail, '_blank', 'noopener');
+    if (!w) showToast('Please allow pop-ups, or email us directly at lyceumacademy4@gmail.com');
+  }, 1200);
 
   setTimeout(() => {
     btn.innerHTML = '<i class="fas fa-check"></i> Email ready — just hit send!';
     btn.style.background = 'linear-gradient(135deg,#25D366,#128C7E)';
     btn.style.color = '#fff';
     btn.disabled = false;
-    showToast('Your email app is opening with the message pre-filled.');
+    showToast('Your email is opening with the message pre-filled.');
     setTimeout(() => {
       btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
       btn.style.background = '';
@@ -272,7 +296,6 @@ function handleContactForm(e) {
     }, 5000);
   }, 900);
 }
-
 
 /* ---- Toast ---- */
 function showToast(msg) {me 
