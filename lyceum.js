@@ -216,16 +216,20 @@ function submitComment() {
 renderComments();
 
 /* ---- Contact form → mailto ---- */
+
 function handleContactForm(e) {
   e.preventDefault();
   const form = e.target;
+
   const val = (id) => (document.getElementById(id)?.value || '').trim();
+
   const name = val('cf-name');
   const email = val('cf-email');
   const phone = val('cf-phone');
+
   const subjectEl = document.getElementById('cf-subject');
-const subject = Array.from(subjectEl.selectedOptions).map(o => o.value).join(', ') || '—';
-  
+  const subject = Array.from(subjectEl.selectedOptions).map(o => o.value).join(', ') || '—';
+
   const level = val('cf-level');
   const curriculum = val('cf-curriculum');
   const message = val('cf-message');
@@ -234,7 +238,7 @@ const subject = Array.from(subjectEl.selectedOptions).map(o => o.value).join(', 
     `Full Name: ${name}`,
     `Email: ${email}`,
     `WhatsApp / Phone: ${phone || '—'}`,
-    `Subject of Interest: ${subject || '—'}`,
+    `Subject(s) of Interest: ${subject}`,
     `Student's Age / Level: ${level || '—'}`,
     `Curriculum / School System: ${curriculum || '—'}`,
     '',
@@ -244,7 +248,7 @@ const subject = Array.from(subjectEl.selectedOptions).map(o => o.value).join(', 
     '— Sent from lyceumacademy.com contact form'
   ];
 
-  const mailSubject = `New Enquiry from ${name || 'Website Visitor'}${subject ? ' — ' + subject : ''}`;
+  const mailSubject = `New Enquiry from ${name || 'Website Visitor'}${subject !== '—' ? ' — ' + subject : ''}`;
   const href = 'mailto:lyceumacademy4@gmail.com'
     + '?subject=' + encodeURIComponent(mailSubject)
     + '&body=' + encodeURIComponent(lines.join('\n'));
