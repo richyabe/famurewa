@@ -960,3 +960,18 @@ footer{background:var(--bg-dark-section);padding:3.5rem 0 2rem}
   color:var(--gold-lt);
   opacity:.85;
 }
+#cf-subject[multiple] {
+  height: auto;
+  min-height: 120px;
+  padding: 0.6rem;
+}
+#cf-subject[multiple] option {
+  padding: 0.45rem 0.6rem;
+  border-radius: 4px;
+  margin-bottom: 2px;
+}
+#cf-subject[multiple] option:checked {
+  background: linear-gradient(135deg, #C9A227, #B8941F);
+  color: #0F172A;
+}
+
